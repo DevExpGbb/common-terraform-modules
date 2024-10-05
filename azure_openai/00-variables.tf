@@ -18,10 +18,19 @@ variable "public_network_access" {
   default = true
 }
 
+variable "kind" {
+  type = string
+  default = "OpenAI"
+}
+
+variable "sku_name" {
+  type = string
+  default = "S0"
+}
+
 variable "models" {
   description = "Model Deployments create in an Azure Open AI Account in the form of ``` deployment_name = { format = 'openai', name = 'gpt-4', version = '4.0.0' } ```"
   type = map(object({
-    format = string
     name = string
     version = string
   }))
