@@ -10,12 +10,14 @@ variable "resource_group" {
 variable "admin_username" {
   description = "Admin username for the AKS Cluster"
   type = string
+  default = "gbbadmin"
 }
 
 variable "cluster_name" {
   description = "Name of the AKS Cluster"
   type = string
 }
+
 variable "container_registry" {
   description = "Azure Container Registry to link to the AKS Cluster Kubelet Identity"
   type = object({
@@ -26,6 +28,7 @@ variable "container_registry" {
 variable "tags" {
   description = "Tags to apply to the AKS Cluster"
   type = map(string)
+  default = {}
 }
 
 variable "system_node_pool" {
