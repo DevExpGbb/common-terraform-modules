@@ -1,5 +1,13 @@
+resource "time_sleep" "wait_for_role_assignment" {
+  depends_on = [azurerm_role_assignment.cluster-identity-operator]
+
+  create_duration = "60s"
+}
 
 resource "azurerm_kubernetes_cluster" "default" {
+
+  depends_on = [time_sleep.wait_for_role_assignment]
+
   name                = var.cluster_name
   location            = var.resource_group.location
   resource_group_name = var.resource_group.name
