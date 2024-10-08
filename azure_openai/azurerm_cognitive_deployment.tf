@@ -1,3 +1,5 @@
+# Suggest moving to https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/cognitive_deployment
+
 resource "azurerm_cognitive_deployment" "all" {
   for_each = var.models
 
