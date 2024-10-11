@@ -7,6 +7,8 @@ variable "resource_group" {
   description = "The resource group to deploy the bing search service instance to"
   type        = object({
     id       = string
+    name     = string
+    location = string
   })
 }
 
