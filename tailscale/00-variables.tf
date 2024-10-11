@@ -25,15 +25,15 @@ variable "user_assigned_identity_id" {
   type        = string
 }
 
-variable "key_vault_name" {
-  description = "The key vault to use for the VM.  Key vault is used to store the tailscale_authkey"
-  type        = string
-}
+# variable "key_vault_name" {
+#   description = "The key vault to use for the VM.  Key vault is used to store the tailscale_authkey"
+#   type        = string
+# }
 
-variable "secret_name" {
-  description = "The secret name to use for the VM.  Secret is used to store the tailscale_authkey"
-  type        = string
-}
+# variable "secret_name" {
+#   description = "The secret name to use for the VM.  Secret is used to store the tailscale_authkey"
+#   type        = string
+# }
 
 variable "tailscale_auth_key" {
   description = "Tailscale Auth Key"
