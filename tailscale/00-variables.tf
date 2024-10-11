@@ -35,6 +35,10 @@ variable "secret_name" {
   type        = string
 }
 
-variable "subnet_cidrs" {
+variable "tailscale_auth_key" {
+  description = "Tailscale Auth Key"
+}
+
+variable "advertise_routes" {
   description = "A list of the subnet cidrs that tailscale will advertise and be the subnet router for"
 }
