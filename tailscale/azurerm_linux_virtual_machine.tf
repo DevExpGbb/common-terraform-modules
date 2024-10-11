@@ -7,7 +7,7 @@ resource "azurerm_network_interface" "default" {
     name = local.name
 
     private_ip_address_allocation = "Dynamic"
-    subnet_id = var.subnet.id
+    subnet_id = var.subnet_id
   }
   
 }
