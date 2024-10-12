@@ -42,5 +42,6 @@ variable "tailscale_auth_key" {
 }
 
 variable "advertise_routes" {
+  type = list
   description = "A list of the subnet cidrs that tailscale will advertise and be the subnet router for"
 }

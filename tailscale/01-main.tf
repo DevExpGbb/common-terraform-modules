@@ -19,7 +19,7 @@ data "cloudinit_config" "cloudinit" {
     content_type = "text/x-shellscript"
     content = templatefile("${path.module}/scripts/tailscale.sh", {
       tailscale_auth_key = var.tailscale_auth_key
-      advertise_routes = var.advertise_routes
+      advertise_routes = join(",", var.advertise_routes)
     })
   }
 }
