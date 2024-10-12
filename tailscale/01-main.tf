@@ -9,7 +9,7 @@ terraform {
 
 locals {
   name = "${var.name}-tailscale"
-  admin_username = "gbbadmin"
+  admin_username = var.admin_username
 }
 
 data "cloudinit_config" "cloudinit" {

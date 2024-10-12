@@ -45,3 +45,9 @@ variable "advertise_routes" {
   type = list
   description = "A list of the subnet cidrs that tailscale will advertise and be the subnet router for"
 }
+
+variable "admin_username" {
+  description = "The admin username to use for the VM"
+  type        = string
+  default = "gbbadmin"
+}
