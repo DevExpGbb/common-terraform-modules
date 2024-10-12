@@ -16,13 +16,8 @@ data "cloudinit_config" "cloudinit" {
   base64_encode = true
   gzip          = true
   part {
-    content_type = "text/cloud-config"
-    content      = file("${path.module}/tailscale/cloudinit.yml")
-  }
-
-  part {
     content_type = "text/x-shellscript"
-    content = templatefile("${path.module}/tailscale/cloudinit.sh", {
+    content = templatefile("${path.module}/scripts/tailscale.sh", {
       # user_msi = var.user_assigned_identity_id
       # secret_name = var.secret_name
       # key_vault_name = var.key_vault_name
