@@ -18,6 +18,7 @@ resource "azurerm_linux_virtual_machine" "default" {
   location            = var.resource_group.location
   size                = "Standard_F2"
   admin_username      = local.admin_username
+  tags                = var.tags
   network_interface_ids = [
     azurerm_network_interface.default.id,
   ]
