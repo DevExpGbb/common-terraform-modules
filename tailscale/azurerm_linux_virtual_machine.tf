@@ -12,6 +12,11 @@ resource "azurerm_network_interface" "default" {
   
 }
 
+resource "azurerm_network_interface_security_group_association" "default" {
+  network_interface_id = azurerm_network_interface.default.id
+  network_security_group_id = azurerm_network_security_group.default.id  
+}
+
 resource "azurerm_linux_virtual_machine" "default" {
   name                = local.name
   resource_group_name = var.resource_group.name
