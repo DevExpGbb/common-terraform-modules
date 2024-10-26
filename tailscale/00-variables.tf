@@ -51,3 +51,9 @@ variable "admin_username" {
   type        = string
   default = "gbbadmin"
 }
+
+variable "tags" {
+  description = "The tags used for the VM"
+  type = map(string)
+  default = {}
+}
