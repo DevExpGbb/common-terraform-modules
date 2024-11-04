@@ -8,7 +8,7 @@ echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale
 sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
 
 # Authenticate Tailscale
-tailscale up \
+sudo tailscale up \
   --authkey=${tailscale_auth_key} \
   --advertise-routes=${advertise_routes} \
   --advertise-exit-node
