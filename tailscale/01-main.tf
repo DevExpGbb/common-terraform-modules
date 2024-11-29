@@ -10,6 +10,7 @@ terraform {
 locals {
   name = "${var.name}-tailscale"
   admin_username = var.admin_username
+  tags = merge([var.tags, {  CostControl = "Ignore" }])
 }
 
 data "cloudinit_config" "cloudinit" {
